@@ -1,13 +1,38 @@
-function validateForm(form){
+function validateForm(){
     var valid=true;
-    console.log();
-    // if($("#contactName").val()=="")
-    // {
-    //     valid=false;
-    // }
+    try{
+        var contactName = document.getElementById("contactName").value;
+        var contactPhone = document.getElementById("contactPhone").value;
+        var contactEmail = document.getElementById("contactEmail").value;
+        var contactQuestion = document.getElementById("contactQuestion").value;
 
-    if(!valid){
-        alert("Debe completar todos los datos");
+        if(contactName == '')
+        {
+            valid=false;
+        }
+
+        if(contactPhone == '')
+        {
+            valid=false;
+        }
+
+        if(contactEmail == '')
+        {
+            valid=false;
+        }
+
+        if(contactQuestion == '')
+        {
+            valid=false;
+        }
+
+        if(!valid){
+            alert("Debe completar todos los datos");
+        }
+        return valid;
     }
-    return valid;
+    catch(err){
+        alert(err);
+        return false;
+    }
 }
