@@ -3,3 +3,15 @@
     background-color: mediumspringgreen;
     color: aliceblue;
 }
+
+.ask{
+    background-color: white;
+    color: black;
+}
+
+.askButton{
+    font-weight: bold;
+    font-style: italic;
+    background-color: antiquewhite;
+    color: green;
+}
