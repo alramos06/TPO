@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"
+        <meta name="viewport" content="width=device-whith, initial-scale">                
+        <link rel="shortcut icon" href="Images/Favicon/icono.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/tpo.css">
+        <script src="Scripts/tpo.js"></script>
+        <title>San Telmo - Contacto</title>
+    </head>
+    <body>
+        <header>
+            <h1>Conociendo San Telmo</h1>
+            <nav class="menu" name="manuContact">
+                <ul type="none">
+                    <li><a href="index.html">Historia</a></li>
+                    <li><a href="">Gastronomia</a></li>
+                    <li><a href="">Entretenimiento</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h2>Formulario de Contacto</h2>
+            <form action="" method="post" name="fomr1" onsubmit="return validateForm()">
+                <p>
+                    <label for="contactName">Nombre:
+                        <input class="ask" type="text" name="contactName" id="contactName" value="hola">
+                    </label>
+                </p>
+                <p>
+                    <label for="contactPhone">Telefono:
+                        <input class="ask" type="text" name="contactPhone" id="contactPhone">
+                    </label>
+                </p>
+                <p>
+                    <label for="contactEmail">Correo electronico:
+                        <input class="ask" type="email" name="contactEmail" id="contactEmail">
+                    </label>
+                </p>                
+                <p>
+                    <label for="contactQuestion">Consulta:
+                        <input class="ask" type="text" name="contactQuestion" id="contactQuestion">
+                    </label>
+                </p>
+                <p>
+                    <input class="askButton" type="submit" id="send" value="Enviar Consulta">
+                </p>
+            </form>
+        </section>
+    </body>
+</html>
