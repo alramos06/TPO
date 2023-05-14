@@ -1,17 +1,65 @@
 *{
     font-family: serif;
-    background-color: mediumspringgreen;
+    background-color: rgb(129, 13, 236);
     color: aliceblue;
 }
 
 .ask{
     background-color: white;
     color: black;
+    font-size: 1.10em;
 }
 
 .askButton{
     font-weight: bold;
     font-style: italic;
+    font-size: 1.10em;
     background-color: antiquewhite;
-    color: green;
+    color: rgb(129, 13, 236);
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+}
+
+li a{
+    font-size: 1.75em;
+    text-decoration: none;
+    padding: 5px;
+}
+
+@media only screen and (max-width: 200px) {
+    .menu {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+.navigation{
+    border:  7px solid;
+    border-color: aliceblue;
+    border-radius: 20px;
+}
+
+label{    
+    display: inline-block;
+    width: 140px;
+    font-size: 1.10em;
+    
+    vertical-align: top;
+}
+
+header h1{
+    text-align: center;
+}
+
+#textoContacto p{
+    text-align: center;
+    font-size: 1.20em;
+}
+
+.validation{
+    display:none;
+    color: yellow;
 }

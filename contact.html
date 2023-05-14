@@ -6,48 +6,109 @@
         <meta name="viewport" content="width=device-whith, initial-scale">                
         <link rel="shortcut icon" href="Images/Favicon/icono.ico" type="image/x-icon">
         <link rel="stylesheet" href="css/tpo.css">
-        <script src="Scripts/tpo.js"></script>
         <title>San Telmo - Contacto</title>
-    </head>
+    </head>    
+    <script>
+        function validateNumber(event){
+            var charCode = event.keyCode;
+            if(charCode<48 || charCode>57){
+                document.getElementById("contactPhoneValidation2").style.display = 'block';
+                return false;
+            }
+            document.getElementById("contactPhoneValidation2").style.display = 'none';
+            return true;
+        }
+
+        function validateForm(){
+            var valid=true;
+            try{
+                let contactName = document.getElementById("contactName").value;
+                let contactPhone = document.getElementById("contactPhone").value;
+                let contactEmail = document.getElementById("contactEmail").value;
+                let contactQuestion = document.getElementById("contactQuestion").value;
+                let contactNameValidation = document.getElementById("contactNameValidation");
+                let contactPhoneValidation = document.getElementById("contactPhoneValidation");
+                let contactEmailValidation = document.getElementById("contactEmailValidation");
+                let contactQuestionValidation = document.getElementById("contactQuestionValidation");
+
+                contactNameValidation.style.display = 'none';
+                contactPhoneValidation.style.display = 'none';
+                contactEmailValidation.style.display = 'none';
+                contactQuestionValidation.style.display = 'none';
+
+                if(contactName == '')
+                {
+                    contactNameValidation.style.display = 'block';
+                    valid=false;
+                }
+
+                if(contactPhone == '')
+                {
+                    contactPhoneValidation.style.display = 'block';
+                    valid=false;
+                }
+
+                if(contactEmail == '')
+                {
+                    contactEmailValidation.style.display = 'block';
+                    valid=false;
+                }
+
+                if(contactQuestion == '')
+                {
+                    contactQuestionValidation.style.display = 'block';
+                    valid=false;
+                }
+
+                return valid;
+            }
+            catch(err){
+                alert(err);
+                return false;
+            }
+        }
+    </script>
     <body>
         <header>
             <h1>Conociendo San Telmo</h1>
-            <nav class="menu" name="manuContact">
-                <ul type="none">
-                    <li><a href="index.html">Historia</a></li>
-                    <li><a href="">Gastronomia</a></li>
-                    <li><a href="">Entretenimiento</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
-                </ul>
-            </nav>
+            <div class="navigation"></div>
         </header>
         <section>
-            <h2>Formulario de Contacto</h2>
-            <form action="" method="post" name="fomr1" onsubmit="return validateForm()">
-                <p>
-                    <label for="contactName">Nombre:
-                        <input class="ask" type="text" name="contactName" id="contactName" required>
-                    </label>
-                </p>
-                <p>
-                    <label for="contactPhone">Telefono:
-                        <input class="ask" type="tel" name="contactPhone" id="contactPhone" required>
-                    </label>
-                </p>
-                <p>
-                    <label for="contactEmail">Correo electronico:
-                        <input class="ask" type="email" name="contactEmail" id="contactEmail" required>
-                    </label>
-                </p>                
-                <p>
-                    <label for="contactQuestion">Consulta:
-                        <input class="ask" type="text" name="contactQuestion" id="contactQuestion" required>
-                    </label>
-                </p>
-                <p>
-                    <input class="askButton" type="submit" id="send" value="Enviar Consulta">
-                </p>
-            </form>
+            <div>
+                <h2>Formulario de Contacto</h2>
+            </div>
+            <div id="textoContacto">
+                <p>Estimado usuario, para cualquier duda o consulta puede completar la información solicitada y le será contactado a la brevedad posible. Muchas gracias por su visita!</p>
+            </div>
+            <div id="formulario" name="formulario">
+                <form action="" method="post" name="fomr1" onsubmit="return validateForm()">
+                    <p>
+                        <label for="contactName">Nombre:</label>
+                        <input class="ask" type="text" name="contactName" id="contactName" style="width: 300px;" placeholder="Nombre y Apellido">
+                        <span class="validation" id="contactNameValidation">Debe ingresar un nombre!</span>
+                    </p>
+                    <p>
+                        <label for="contactPhone">Telefono:</label>
+                        <input class="ask" type="tel" name="contactPhone" id="contactPhone" style="width: 300px;" onkeypress="return validateNumber(event);" placeholder="Número telefonico">
+                        <span class="validation" id="contactPhoneValidation">Debe ingresar un número telefonico!</span>
+                        <span class="validation" id="contactPhoneValidation2">Solo se permiten números!</span>
+                    </p>
+                    <p>
+                        <label for="contactEmail">Correo electronico:</label>
+                        <input class="ask" type="email" name="contactEmail" id="contactEmail" style="width: 300px;" placeholder="Email">
+                        <span class="validation" id="contactEmailValidation">Debe ingresar un email!</span>
+                    </p>                
+                    <p>
+                        <label for="contactQuestion">Consulta:</label>
+                        <textarea class="ask" name="contactQuestion" id="contactQuestion" cols="30" rows="10" maxlength="500" style="width: 300px;" placeholder="Escriba aqui su consulta"></textarea>
+                        <span class="validation" id="contactQuestionValidation">Debe ingresar una consulta!</span>
+                    </p>
+                    <p>
+                        <input class="askButton" type="submit" id="send" value="Enviar Consulta">
+                    </p>
+                </form>
+            </div>
         </section>
     </body>
+    <script src="Scripts/tpo.js"></script>    
 </html>

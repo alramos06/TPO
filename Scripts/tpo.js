@@ -1,38 +1,9 @@
-function validateForm(){
-    var valid=true;
-    try{
-        var contactName = document.getElementById("contactName").value;
-        var contactPhone = document.getElementById("contactPhone").value;
-        var contactEmail = document.getElementById("contactEmail").value;
-        var contactQuestion = document.getElementById("contactQuestion").value;
-
-        if(contactName == '')
-        {
-            valid=false;
-        }
-
-        if(contactPhone == '')
-        {
-            valid=false;
-        }
-
-        if(contactEmail == '')
-        {
-            valid=false;
-        }
-
-        if(contactQuestion == '')
-        {
-            valid=false;
-        }
-
-        if(!valid){
-            alert("Debe completar todos los datos");
-        }
-        return valid;
-    }
-    catch(err){
-        alert(err);
-        return false;
-    }
-}
+let menu = document.querySelector(".navigation"); 
+menu.innerHTML=`<nav class="menu">
+                    <ul class="menu" type="none">
+                        <li class="menu item1"><a href="index.html">Historia</a></li>
+                        <li class="menu item2"><a href="">Gastronomia</a></li>
+                        <li class="menu item3"><a href="">Entretenimiento</a></li>
+                        <li class="menu item4"><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </nav>`;
