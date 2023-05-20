@@ -61,5 +61,6 @@ header h1{
 
 .validation{
     display:none;
-    color: yellow;
-}
+    color: yellow;}
+#bodyHistory{text-align: center;
+    }
