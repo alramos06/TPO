@@ -7,3 +7,10 @@ menu.innerHTML=`<nav class="menu">
                         <li class="menu item4"><a href="contact.html">Contacto</a></li>
                     </ul>
                 </nav>`;
+
+let net = document.querySelector(".networks"); 
+net.innerHTML= `<ul class="network" type="none">
+                    <li class="network"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li class="network"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li class="network"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>`;
