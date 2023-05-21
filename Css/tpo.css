@@ -63,6 +63,11 @@ header h1{
     display:none;
     color: yellow;
 }
+
+#bodyHistory{
+ text-align: center;
+}
+   
 .parent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
