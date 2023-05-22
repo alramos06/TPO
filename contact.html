@@ -84,25 +84,25 @@
             <div id="formulario" name="formulario">
                 <form action="" method="post" name="fomr1" onsubmit="return validateForm()">
                     <div>
-                        <label for="contactName">Nombre:</label>
+                        <label for="contactName">Nombre:
                         <input class="ask" type="text" name="contactName" id="contactName" style="width: 300px;" placeholder="Nombre y Apellido">
-                        <span class="validation" id="contactNameValidation">Debe ingresar un nombre!</span>
+                        <span class="validation" id="contactNameValidation">Debe ingresar un nombre!</span></label>
                     </div>
                     <div>
-                        <label for="contactPhone">Telefono:</label>
+                        <label for="contactPhone">Telefono:
                         <input class="ask" type="tel" name="contactPhone" id="contactPhone" style="width: 300px;" onkeypress="return validateNumber(event);" placeholder="Número telefonico">
                         <span class="validation" id="contactPhoneValidation">Debe ingresar un número telefonico!</span>
-                        <span class="validation" id="contactPhoneValidation2">Solo se permiten números!</span>
+                        <span class="validation" id="contactPhoneValidation2">Solo se permiten números!</span></label>
                     </div>
                     <div>
-                        <label for="contactEmail">Correo:</label>
+                        <label for="contactEmail">Correo:
                         <input class="ask" type="email" name="contactEmail" id="contactEmail" style="width: 300px;" placeholder="Email">
-                        <span class="validation" id="contactEmailValidation">Debe ingresar un email!</span>
+                        <span class="validation" id="contactEmailValidation">Debe ingresar un email!</span></label>
                     </div>                
                     <div>
-                        <label for="contactQuestion">Consulta:</label>
+                        <label for="contactQuestion">Consulta:
                         <textarea class="ask" name="contactQuestion" id="contactQuestion" maxlength="500" style="width: 300px; height: 150px; resize: none;" placeholder="Escriba aqui su consulta"></textarea>
-                        <span class="validation" id="contactQuestionValidation">Debe ingresar una consulta!</span>
+                        <span class="validation" id="contactQuestionValidation">Debe ingresar una consulta!</span></label>
                     </div>
                     <div>
                         <input class="askButton" type="submit" id="send" value="Enviar Consulta">
@@ -110,8 +110,7 @@
                 </form>
             </div>
         </section>
-        <footer>
-            <div class="networks"></div>
+        <footer>            
         </footer>
     </body>
     <script src="Scripts/tpo.js"></script>    

@@ -1,6 +1,6 @@
 *{
     font-family: serif;
-    font-size: 1.1rem;
+    font-size: 18px;
     background-color: rgb(129, 13, 236);
     color: aliceblue;
 }
@@ -8,15 +8,15 @@
 .ask{
     background-color: white;
     color: black;
-    font-size: 1.10rem;
 }
 
 .askButton{
     font-weight: bold;
     font-style: italic;
-    font-size: 1.10rem;
     background-color: antiquewhite;
     color: rgb(129, 13, 236);
+    margin-inline-start: 9rem;
+    margin-top: 10px;
 }
 
 .menu{
@@ -34,21 +34,31 @@
 
 .menu a, .network a{
     font-size: 1.75rem;
-    margin-left: 15px;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
-/* @media only screen and (max-width: 1000px) {
+ul.menu, ul.network{
+    padding-inline-start: 0em;
+}
+
+nav.menu, li.item1 , li.item2, li.item3, li.item4, .item1>a , .item2>a, .item3>a, .item4>a{
+    background-color: aliceblue;
+    color: rgb(129, 13, 236);
+}
+
+@media only screen and (max-width: 500px) {
     .menu{
-        flex-direction: row;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
     }
-} */
+}
 
 .navigation{
-    border:  7px solid;
+    border:  3px solid;
     border-color: aliceblue;
     border-radius: 20px;
+    background-color: aliceblue;
 }
 
 li a{
@@ -57,8 +67,7 @@ li a{
 
 label{    
     display: inline-block;
-    width: 120px;
-    font-size: 1.10rem;    
+    width: 300px;  
     vertical-align: top;
 }
 
@@ -78,31 +87,21 @@ div {
 
 #textoContacto p{
     text-align: center;
-    font-size: 1.20rem;
 }
 
 .validation{
     display:none;
     color: yellow;
+    margin-left: 0.5rem;
 }
 
 #bodyHistory{
  text-align: center;
 }
    
-.parent {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 11px;
-    grid-row-gap: 11px;
-    } 
-  
-     
 .item3 ul, .item3 ul li, .item3 ul li a {  
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
     list-style: none;
-    font-size: 1.1rem;
     font-style: italic;
     background-color: rgb(187, 107, 230);
     border-top-right-radius:2%;

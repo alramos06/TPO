@@ -8,9 +8,14 @@ menu.innerHTML=`<nav class="menu">
                     </ul>
                 </nav>`;
 
-let net = document.querySelector(".networks"); 
-net.innerHTML= `<ul class="network" type="none">
-                    <li class="network"><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li class="network"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li class="network"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                </ul>`;
+let net = document.querySelector("footer"); 
+net.innerHTML= `<div>
+                    <ul class="network" type="none">
+                        <li class="network"><a href="https:www.facebook.com/" target=”_blank”><i class="fab fa-facebook"></i></a></li>
+                        <li class="network"><a href="https://twitter.com/" target=”_blank”><i class="fab fa-twitter"></i></a></li>
+                        <li class="network"><a href="https://www.instagram.com/" target=”_blank”><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p style="text-align: center">@2023 San Telmo</p>
+                </div>`;
