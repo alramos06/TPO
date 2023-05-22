@@ -63,3 +63,26 @@ header h1{
     display:none;
     color: yellow;
 }
+
+#bodyHistory{
+ text-align: center;
+}
+   
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 11px;
+    grid-row-gap: 11px;
+    } 
+  
+     
+  .item3 ul {  
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    list-style: none;
+    font-size: medium;
+    font-style: italic;
+    background-color: rgb(187, 107, 230);
+    border-top-right-radius:2%;
+  
+  } 
