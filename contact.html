@@ -77,37 +77,39 @@
         <section>
             <div>
                 <h2>Formulario de Contacto</h2>
-            </div>
+            </div>            
             <div id="textoContacto">
-                <p>En el caso que usted quisiera hacernos una consulta, por favor complete la información solicitada y le será contactado a la brevedad posible. Muchas gracias por su visita!</p>
+                <p>En el caso que usted quisiera hacernos una consulta, por favor complete la información solicitada y le será contactado a la brevedad posible.<br/>Muchas gracias por su visita!</p>
             </div>
-            <div id="formulario" name="formulario">
-                <form action="" method="post" name="fomr1" onsubmit="return validateForm()">
-                    <div>
-                        <label for="contactName">Nombre:
-                        <input class="ask" type="text" name="contactName" id="contactName" style="width: 300px;" placeholder="Nombre y Apellido">
-                        <span class="validation" id="contactNameValidation">Debe ingresar un nombre!</span></label>
-                    </div>
-                    <div>
-                        <label for="contactPhone">Telefono:
-                        <input class="ask" type="tel" name="contactPhone" id="contactPhone" style="width: 300px;" onkeypress="return validateNumber(event);" placeholder="Número telefonico">
-                        <span class="validation" id="contactPhoneValidation">Debe ingresar un número telefonico!</span>
-                        <span class="validation" id="contactPhoneValidation2">Solo se permiten números!</span></label>
-                    </div>
-                    <div>
-                        <label for="contactEmail">Correo:
-                        <input class="ask" type="email" name="contactEmail" id="contactEmail" style="width: 300px;" placeholder="Email">
-                        <span class="validation" id="contactEmailValidation">Debe ingresar un email!</span></label>
-                    </div>                
-                    <div>
-                        <label for="contactQuestion">Consulta:
-                        <textarea class="ask" name="contactQuestion" id="contactQuestion" maxlength="500" style="width: 300px; height: 150px; resize: none;" placeholder="Escriba aqui su consulta"></textarea>
-                        <span class="validation" id="contactQuestionValidation">Debe ingresar una consulta!</span></label>
-                    </div>
-                    <div>
-                        <input class="askButton" type="submit" id="send" value="Enviar Consulta">
-                    </div>
-                </form>
+            <div class="form-container">
+                <div id="formulario" name="formulario">
+                    <form action="" method="post" name="fomr1" onsubmit="return validateForm()">
+                        <div>
+                            <label for="contactName">Nombre:
+                            <input class="ask" type="text" name="contactName" id="contactName" style="width: 300px;" placeholder="Nombre y Apellido">
+                            <span class="validation" id="contactNameValidation">Debe ingresar un nombre!</span></label>
+                        </div>
+                        <div>
+                            <label for="contactPhone">Telefono:
+                            <input class="ask" type="tel" name="contactPhone" id="contactPhone" style="width: 300px;" onkeypress="return validateNumber(event);" placeholder="Número telefonico">
+                            <span class="validation" id="contactPhoneValidation">Debe ingresar un número telefonico!</span>
+                            <span class="validation" id="contactPhoneValidation2">Solo se permiten números!</span></label>
+                        </div>
+                        <div>
+                            <label for="contactEmail">Correo:
+                            <input class="ask" type="email" name="contactEmail" id="contactEmail" style="width: 300px;" placeholder="Email">
+                            <span class="validation" id="contactEmailValidation">Debe ingresar un email!</span></label>
+                        </div>                
+                        <div>
+                            <label for="contactQuestion">Consulta:
+                            <textarea class="ask" name="contactQuestion" id="contactQuestion" maxlength="500" style="width: 300px; height: 150px; resize: none;" placeholder="Escriba aqui su consulta"></textarea>
+                            <span class="validation" id="contactQuestionValidation">Debe ingresar una consulta!</span></label>
+                        </div>
+                        <div id="button-formulario">
+                            <input class="askButton" type="submit" id="send" value="Enviar Consulta">
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
         <footer>            
