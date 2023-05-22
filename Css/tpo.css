@@ -5,9 +5,18 @@
     color: aliceblue;
 }
 
+body {
+  margin: 0;
+  padding: 20px;
+}
+
 .ask{
     background-color: white;
     color: black;
+}
+
+#button-formulario{
+    display: grid;
 }
 
 .askButton{
@@ -15,7 +24,6 @@
     font-style: italic;
     background-color: antiquewhite;
     color: rgb(129, 13, 236);
-    margin-inline-start: 9rem;
     margin-top: 10px;
 }
 
@@ -107,3 +115,18 @@ div {
     border-top-right-radius:2%;
   
   } 
+
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #formulario {
+    width: 310px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
