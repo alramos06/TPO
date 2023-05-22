@@ -42,7 +42,7 @@ ul.menu, ul.network{
     padding-inline-start: 0em;
 }
 
-nav.menu, li.item1 , li.item2, li.item3, li.item4, .item1>a , .item2>a, .item3>a, .item4>a{
+nav.menu, ul.menu, li.item1 , li.item2, li.item3, li.item4, .item1>a , .item2>a, .item3>a, .item4>a{
     background-color: aliceblue;
     color: rgb(129, 13, 236);
 }
