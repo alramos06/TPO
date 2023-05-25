@@ -55,12 +55,34 @@ nav.menu, ul.menu, li.item1 , li.item2, li.item3, li.item4, .item1>a , .item2>a,
     color: rgb(129, 13, 236);
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 575px) {
+    .menu{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    .navigation{        
+        min-width: 280px;
+    }
+    .menu a, .network a{
+        font-size: 100%;
+    }
+}
+
+ @media only screen and (min-width:575px) and (max-width: 768px) {
+    .menu{
+        flex-direction: column;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width: 992px) {
     .menu{
         flex-direction: column;
         text-align: center;
     }
-}
+} 
 
 .navigation{
     border:  3px solid;
