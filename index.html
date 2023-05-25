@@ -2,12 +2,17 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"
-        <meta name="viewport" content="width=device-whith, initial-scale">                
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-whith, initial-scale=1.0">                
         <link rel="shortcut icon" href="Images/Favicon/San-Telmo.ico" type="image/x-icon">
         <link rel="stylesheet" href="Css/tpo.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css">
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
         <title> San Telmo - Historia</title>
     </head>  
     <body id="bodyHistory">
@@ -28,7 +33,25 @@
           <img src="Images/download.jpg"alt="" with="250px" height="200px">
           <img src="Images/Alamy_M15HK8_header.jpg" alt="" with="250px" height="200px">
           <img src="Images/istockphoto-1264367247-612x612.jpg" alt="" with="250px" height="200px">
+
+          
         </section>
+
+        <div id="map" class="map map-home"></div>
+
+
+
+  <script>
+    var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+    var map = L.map('map').setView([-34.6215, -58.3736], 17).addLayer(osm);
+    L.marker([-34.6215, -58.3736])
+      .addTo(map)
+      .bindPopup('Barrio de San Telmo.')
+      .openPopup();
+  </script>
+
         <footer>
         </footer>
      </body>
