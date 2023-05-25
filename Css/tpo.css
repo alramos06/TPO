@@ -51,11 +51,11 @@ ul.menu, ul.network{
 }
 
 nav.menu, ul.menu, li.item1 , li.item2, li.item3, li.item4, .item1>a , .item2>a, .item3>a, .item4>a{
-    background-color: aliceblue;
+    background-color: transparent;
     color: rgb(129, 13, 236);
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 360px) {
     .menu{
         flex-direction: column;
         text-align: center;
@@ -114,19 +114,28 @@ div {
     background-color: rgb(187, 107, 230);
     border-top-right-radius:2%;
   
-  } 
+} 
 
-  .form-container {
+.form-container, #imgContactContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
+}
 
-  #formulario {
+#formulario {
     width: 310px;
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+}
+
+#contact{
+    width: 80%;
+    min-width: 320px;
+    max-height: 80%;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-top:5% ;
+}
