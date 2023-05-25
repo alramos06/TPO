@@ -1,5 +1,5 @@
 *{
-    font-family: serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     background-color: rgb(129, 13, 236);
     color: aliceblue;
@@ -160,4 +160,14 @@ div {
     object-fit: cover;
     border-radius: 30px;
     margin-top:5% ;
+}
+#map{
+  width: 500px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  background-color: white;
 }

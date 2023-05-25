@@ -8,6 +8,11 @@
         <link rel="stylesheet" href="Css/tpo.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css">
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
         <title> San Telmo - Historia</title>
     </head>  
     <body id="bodyHistory">
@@ -29,9 +34,24 @@
           <img src="Images/Alamy_M15HK8_header.jpg" alt="" with="250px" height="200px">
           <img src="Images/istockphoto-1264367247-612x612.jpg" alt="" with="250px" height="200px">
 
-          <h5>Ubicación:</h5>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13133.088996041013!2d-58.38055779741326!3d-34.62255976715648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb2d125e1c01%3A0xacd97607979875ab!2sSan%20Telmo%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1685038213422!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
         </section>
+
+        <div id="map" class="map map-home"></div>
+
+
+
+  <script>
+    var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+    var map = L.map('map').setView([-34.6215, -58.3736], 17).addLayer(osm);
+    L.marker([-34.6215, -58.3736])
+      .addTo(map)
+      .bindPopup('Barrio de San Telmo.')
+      .openPopup();
+  </script>
+
         <footer>
         </footer>
      </body>
