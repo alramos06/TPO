@@ -28,32 +28,31 @@
         <h3 > Un hermoso  recorrido histórico en familia</h3>
         <section>
           <h5>Video:</h5>
-          <p> <h6>San Telmo y sus misterios: la historia de un barrio a través de sus casonas y calles  </h6></p>
-          <p>  <a href="https://www.youtube.com/watch?v=dmFdnxdKShA"target= "blank">Ir a youtube</a></p>
-          <img src="Images/download.jpg"alt="" with="250px" height="200px">
-          <img src="Images/Alamy_M15HK8_header.jpg" alt="" with="250px" height="200px">
-          <img src="Images/istockphoto-1264367247-612x612.jpg" alt="" with="250px" height="200px">
-
-          
+          <p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dmFdnxdKShA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </p>
+          <p>  
+            <img src="Images/download.jpg"alt="" with="250px" height="200px">
+            <img src="Images/Alamy_M15HK8_header.jpg" alt="" with="250px" height="200px">
+            <img src="Images/istockphoto-1264367247-612x612.jpg" alt="" with="250px" height="200px">
+          </p>
+          <p>
+            <h5>Ubicación:</h5>
+            <div id="map" class="map map-home"></div>
+          </p>          
         </section>
-
-        <div id="map" class="map map-home"></div>
-
-
-
-  <script>
-    var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
-    var map = L.map('map').setView([-34.6215, -58.3736], 17).addLayer(osm);
-    L.marker([-34.6215, -58.3736])
-      .addTo(map)
-      .bindPopup('Barrio de San Telmo.')
-      .openPopup();
-  </script>
-
         <footer>
         </footer>
      </body>
+     <script>
+      var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+      var map = L.map('map').setView([-34.6215, -58.3736], 17).addLayer(osm);
+      L.marker([-34.6215, -58.3736])
+        .addTo(map)
+        .bindPopup('Barrio de San Telmo.')
+        .openPopup();
+    </script>
      <script src="Scripts/tpo.js"></script>
 </html>
