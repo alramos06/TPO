@@ -16,10 +16,11 @@
     grid-row-start: 1;
     grid-row-end: 6;
     text-align:left;
-    font-size:medium;
-    border: 5px solid rgb(110, 16, 132);
-    border-inline-style:;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
     padding:10px;
+    list-style-type:none;
+    box-shadow: 2px;
     list-style-type:none;
     }
         
@@ -31,9 +32,11 @@
         grid-row-end: 6;
         align-items: center;
         gap: 10px;
-        border: 3px solid rgb(108, 16, 132);
-        border-top-right-radius:2%;
-        }
+        border: 1px solid whitesmoke;
+        border-radius: 5px;
+        padding:10px;
+        border-top-right-radius:2%
+}
 
 
  
