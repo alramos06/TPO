@@ -2,34 +2,57 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"
-        <meta name="viewport" content="width=device-whith, initial-scale">                
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-whith, initial-scale=1.0">                
         <link rel="shortcut icon" href="Images/Favicon/San-Telmo.ico" type="image/x-icon">
         <link rel="stylesheet" href="Css/tpo.css">
-        <link
-         rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <title> San Telmo-Historia</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css">
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+        <title> San Telmo - Historia</title>
     </head>  
     <body id="bodyHistory">
         <header> 
           <h1> Conociendo San Telmo</h1>
           <div class="navigation"></div>
         </header>
-        <h1 class="animate__animated  animate__swing" >  Historia de San Telmo:</h1>                                                                                                                                                                                        
+        <h2 class="animate__animated  animate__swing" >  Historia de San Telmo</h2>                                                                                                                                                                                        
         <p class="animate__animated animate__fadeInTopRight"> Bienvenidos a este pequeño recorrido por este coqueto barrio   </p>
         <div class="circle"></div>
 
         <img src="Images/san-telmo-cover.jpg" alt="barrio"width="90%" height="3%">
-        <h2 > Un hermoso  recorrido historico en familia</h2>
+        <h3 > Un hermoso  recorrido histórico en familia</h3>
         <section>
           <h5>Video:</h5>
-          <p> <h6>San Telmo y sus misterios: la historia de un barrio a través de sus casonas y calles  </h6></p>
-          <p>  <a href="https://www.youtube.com/watch?v=dmFdnxdKShA"target= "blank">Ir a youtube</a></p>
-          <img src="Images/download.jpg"alt="" with="250px" height="200px">
-          <img src="Images/Alamy_M15HK8_header.jpg" alt="" with="250px" height="200px">
-          <img src="Images/istockphoto-1264367247-612x612.jpg" alt="" with="250px" height="200px">
+          <p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dmFdnxdKShA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </p>
+          <p>  
+            <img src="Images/download.jpg"alt="" with="250px" height="200px">
+            <img src="Images/Alamy_M15HK8_header.jpg" alt="" with="250px" height="200px">
+            <img src="Images/istockphoto-1264367247-612x612.jpg" alt="" with="250px" height="200px">
+          </p>
+          <p>
+            <h5>Ubicación:</h5>
+            <div id="map" class="map map-home"></div>
+          </p>          
         </section>
+        <footer>
+        </footer>
      </body>
+     <script>
+      var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+      var map = L.map('map').setView([-34.6215, -58.3736], 17).addLayer(osm);
+      L.marker([-34.6215, -58.3736])
+        .addTo(map)
+        .bindPopup('Barrio de San Telmo.')
+        .openPopup();
+    </script>
      <script src="Scripts/tpo.js"></script>
 </html>

@@ -1,88 +1,173 @@
 *{
-    font-family: serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
     background-color: rgb(129, 13, 236);
     color: aliceblue;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
 }
 
 .ask{
     background-color: white;
     color: black;
-    font-size: 1.10em;
+}
+
+#button-formulario{
+    display: grid;
 }
 
 .askButton{
     font-weight: bold;
     font-style: italic;
-    font-size: 1.10em;
     background-color: antiquewhite;
     color: rgb(129, 13, 236);
+    margin-top: 10px;
 }
 
 .menu{
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-li a{
-    font-size: 1.75em;
-    text-decoration: none;
-    padding: 5px;
+.network{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-@media only screen and (max-width: 200px) {
-    .menu {
+.menu a, .network a{
+    font-size: 1.75rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+ul.menu, ul.network{
+    padding-inline-start: 0em;
+}
+
+nav.menu, ul.menu, li.item1 , li.item2, li.item3, li.item4, .item1>a , .item2>a, .item3>a, .item4>a{
+    background-color: transparent;
+    color: rgb(129, 13, 236);
+}
+
+@media only screen and (max-width: 575px) {
+    .menu{
         flex-direction: column;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    .navigation{        
+        min-width: 280px;
+    }
+    .menu a, .network a{
+        font-size: 100%;
     }
 }
 
+ @media only screen and (min-width:575px) and (max-width: 768px) {
+    .menu{
+        flex-direction: column;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width: 992px) {
+    .menu{
+        flex-direction: column;
+        text-align: center;
+    }
+} 
+
 .navigation{
-    border:  7px solid;
+    border:  3px solid;
     border-color: aliceblue;
     border-radius: 20px;
+    background-color: aliceblue;
+}
+
+li a{
+    text-decoration: none;
 }
 
 label{    
     display: inline-block;
-    width: 140px;
-    font-size: 1.10em;
-    
+    width: 300px;  
     vertical-align: top;
 }
 
 header h1{
     text-align: center;
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+div {
+    padding: 0.5%;
 }
 
 #textoContacto p{
     text-align: center;
-    font-size: 1.20em;
 }
 
 .validation{
     display:none;
     color: yellow;
+    margin-left: 0.5rem;
 }
 
 #bodyHistory{
  text-align: center;
 }
    
-.parent {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 11px;
-    grid-row-gap: 11px;
-    } 
-  
-     
-  .item3 ul {  
+.item3 ul, .item3 ul li, .item3 ul li a {  
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
     list-style: none;
-    font-size: medium;
     font-style: italic;
     background-color: rgb(187, 107, 230);
     border-top-right-radius:2%;
   
-  } 
+} 
+
+.form-container, #imgContactContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#formulario {
+    width: 310px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact{
+    width: 80%;
+    min-width: 320px;
+    max-height: 80%;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-top:5% ;
+}
+#map{
+  width: 500px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}

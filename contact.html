@@ -2,10 +2,12 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"
-        <meta name="viewport" content="width=device-whith, initial-scale">                
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">                
         <link rel="shortcut icon" href="Images/Favicon/San-Telmo.ico" type="image/x-icon">
         <link rel="stylesheet" href="Css/tpo.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">        
         <title>San Telmo - Contacto</title>
     </head>    
     <script>
@@ -73,42 +75,50 @@
             <h1>Conociendo San Telmo</h1>
             <div class="navigation"></div>
         </header>
-        <section>
+        <section id="contact-container">
             <div>
                 <h2>Formulario de Contacto</h2>
-            </div>
+            </div>            
             <div id="textoContacto">
-                <p>Estimado usuario, para cualquier duda o consulta puede completar la información solicitada y le será contactado a la brevedad posible. Muchas gracias por su visita!</p>
+                <p>En el caso que usted quisiera hacernos una consulta, por favor complete la información solicitada y será contactado a la brevedad posible.<br/>Muchas gracias por su visita!</p>
             </div>
-            <div id="formulario" name="formulario">
-                <form action="" method="post" name="fomr1" onsubmit="return validateForm()">
-                    <p>
-                        <label for="contactName">Nombre:</label>
-                        <input class="ask" type="text" name="contactName" id="contactName" style="width: 300px;" placeholder="Nombre y Apellido">
-                        <span class="validation" id="contactNameValidation">Debe ingresar un nombre!</span>
-                    </p>
-                    <p>
-                        <label for="contactPhone">Telefono:</label>
-                        <input class="ask" type="tel" name="contactPhone" id="contactPhone" style="width: 300px;" onkeypress="return validateNumber(event);" placeholder="Número telefonico">
-                        <span class="validation" id="contactPhoneValidation">Debe ingresar un número telefonico!</span>
-                        <span class="validation" id="contactPhoneValidation2">Solo se permiten números!</span>
-                    </p>
-                    <p>
-                        <label for="contactEmail">Correo electronico:</label>
-                        <input class="ask" type="email" name="contactEmail" id="contactEmail" style="width: 300px;" placeholder="Email">
-                        <span class="validation" id="contactEmailValidation">Debe ingresar un email!</span>
-                    </p>                
-                    <p>
-                        <label for="contactQuestion">Consulta:</label>
-                        <textarea class="ask" name="contactQuestion" id="contactQuestion" cols="30" rows="10" maxlength="500" style="width: 300px;" placeholder="Escriba aqui su consulta"></textarea>
-                        <span class="validation" id="contactQuestionValidation">Debe ingresar una consulta!</span>
-                    </p>
-                    <p>
-                        <input class="askButton" type="submit" id="send" value="Enviar Consulta">
-                    </p>
-                </form>
+            <div class="form-container">
+                <div id="formulario" name="formulario">
+                    <form action="contact.html" method="post" name="fomr1" onsubmit="return validateForm()">
+                        <div>
+                            <label for="contactName">Nombre:
+                            <input class="ask" type="text" name="contactName" id="contactName" style="width: 300px;" placeholder="Nombre y Apellido">
+                            <span class="validation" id="contactNameValidation">Debe ingresar un nombre!</span></label>
+                        </div>
+                        <div>
+                            <label for="contactPhone">Telefono:
+                            <input class="ask" type="tel" name="contactPhone" id="contactPhone" style="width: 300px;" onkeypress="return validateNumber(event);" placeholder="Número telefonico">
+                            <span class="validation" id="contactPhoneValidation">Debe ingresar un número telefonico!</span>
+                            <span class="validation" id="contactPhoneValidation2">Solo se permiten números!</span></label>
+                        </div>
+                        <div>
+                            <label for="contactEmail">Correo:
+                            <input class="ask" type="email" name="contactEmail" id="contactEmail" style="width: 300px;" placeholder="Email">
+                            <span class="validation" id="contactEmailValidation">Debe ingresar un email!</span></label>
+                        </div>                
+                        <div>
+                            <label for="contactQuestion">Consulta:
+                            <textarea class="ask" name="contactQuestion" id="contactQuestion" maxlength="500" style="width: 300px; height: 150px; resize: none;" placeholder="Escriba aqui su consulta"></textarea>
+                            <span class="validation" id="contactQuestionValidation">Debe ingresar una consulta!</span></label>
+                        </div>
+                        <div id="button-formulario">
+                            <input class="askButton" type="submit" id="send" value="Enviar Consulta">
+                        </div>
+                    </form>
+                </div>
+                <div id="imgContactContainer">
+                    <img id="contact" src="Images/contact.jpg" alt="Contacto">
+                </div>
             </div>
         </section>
+        <footer>  
+            
+        </footer>
     </body>
     <script src="Scripts/tpo.js"></script>    
 </html>
