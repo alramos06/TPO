@@ -21,7 +21,7 @@ width: 25%;
 border: 2px solid white;
 border-radius: 5px;
 padding: 10px;
-list-style: none;
+list-style: circle;
 box-shadow: 2px;
 }
 
